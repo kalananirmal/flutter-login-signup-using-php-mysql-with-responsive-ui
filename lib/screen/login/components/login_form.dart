@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:login_admin/constants.dart';
+import 'package:login_admin/screen/admin_panel/admin_screens/home.dart';
 import 'package:login_admin/widgets/common_button.dart';
 import 'package:login_admin/widgets/custom_text_form_field.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -34,7 +35,7 @@ class _LoginFormState extends State<LoginForm> {
 
   Future register() async {
     var url =
-        "http://your_ip_address/backend_file.php"; //here add your IP Address and PHP Backend File Name
+        "http://your_ip/backend_file.php"; //here add your IP Address and PHP Backend File Name
     var responce = await http.post(Uri.parse(url), body: {
       "username": user_n.text,
       "password": user_p.text,
@@ -52,13 +53,20 @@ class _LoginFormState extends State<LoginForm> {
           fontSize: 16.0);
     } else {
       Fluttertoast.showToast(
-          msg: "User create success",
+          msg: "Admin Profile Create Success",
           toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
+          gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.teal,
           textColor: Colors.white,
           fontSize: 16.0);
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => MainSc(),
+        ),
+      );
     }
     user_n.clear();
     user_p.clear();
@@ -88,21 +96,10 @@ class _LoginFormState extends State<LoginForm> {
               label: 'Password',
               controller: user_p,
               suffixIcon: TextButton(
-                child: isPasswordVisible ? Text('Show') : Text('Hide'),
+                child:
+                    isPasswordVisible ? const Text('Show') : const Text('Hide'),
                 onPressed: () => ispasswordvisible(),
               ),
-
-              // suffixIcon: user_p.text.isEmpty
-              // ? TextButton(
-              //     onPressed: () {
-              //       isPasswordVisible;
-              //     },
-              //     child: Text('Show'),
-              //   )
-              // : TextButton(
-              //     onPressed: () {},
-              //     child: Text('Hide'),
-              //   ),
               obscureText: isPasswordVisible,
             ),
             const SizedBox(height: defaultPadding),

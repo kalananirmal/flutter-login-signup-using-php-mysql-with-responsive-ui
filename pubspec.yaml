@@ -1,5 +1,5 @@
 name: login_admin
-description: A new Flutter project.
+
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -37,6 +37,8 @@ dependencies:
   lottie: ^2.0.0
   fluent_ui: ^4.1.0
   google_fonts: ^3.0.1
+  provider: ^6.0.4
+  fl_chart: ^0.55.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -69,6 +71,7 @@ flutter:
   assets:
      - assets/images/
      - assets/lotties/
+     - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
