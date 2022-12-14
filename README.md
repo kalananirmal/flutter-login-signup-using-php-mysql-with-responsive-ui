@@ -2,7 +2,7 @@
 # php-mysql-flutter-login-signup-with-responsive-ui
 Flutter php mysql login and sign up with Responsive UI and Clean Architecture
 
-# test_login
+# admin_login
 
 
 
@@ -18,4 +18,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+###Project Screen Record
+
+
+https://user-images.githubusercontent.com/88218842/207584732-ad371a2f-f4a2-487b-8a47-76be91b6ae19.mp4
 
