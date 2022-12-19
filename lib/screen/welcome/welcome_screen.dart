@@ -17,6 +17,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
       body: Background(
         child: SingleChildScrollView(
+
           child: SafeArea(
             child: Responsive(
               desktop: Row(

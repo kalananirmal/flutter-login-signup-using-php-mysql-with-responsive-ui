@@ -13,19 +13,15 @@ class CommonElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-
       onPressed: () {
         onPressed();
       },
       style: ElevatedButton.styleFrom(
-          fixedSize: const Size(300-110, 60),
-
-
-
+          fixedSize: const Size(300 - 110, 60),
           textStyle: const TextStyle(
             fontSize: 23,
           ),
-         // side: const BorderSide(),
+          // side: const BorderSide(),
           shape: const StadiumBorder(),
           elevation: 5),
       child: Text(text ?? ''),
